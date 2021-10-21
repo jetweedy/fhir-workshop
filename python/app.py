@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import cgitb
-cgitb.enable()
-print("Content-Type:text/html\r\n\r\n")
-print("Hello Python!")
+#import cgitb
+#cgitb.enable()
+#print("Content-Type:text/html\r\n\r\n")
+#print("Hello Python!")
 
 from flask import Flask
 from flask import request
@@ -21,16 +21,14 @@ import fhirclient.models.medicationstatement as ms
 # Try 'Duck' as a name when searching vonk.fire.ly
 # Try 'Thiel' as a name when searching smarthealthit.org
 
-"""
-app = Flask(__name__)
 settings = {
-	'app_id': 'my_web_app',
-	'api_base': 'https://vonk.fire.ly/'	
-#	'api_base': 'https://r3.smarthealthit.org/'
+    'app_id': 'my_web_app',
+    'api_base': 'https://r3.smarthealthit.org'
 }
 smart = client.FHIRClient(settings=settings)
-smart.prepare()
+prep = smart.prepare()
 
+app = Flask(__name__)
 @app.route("/")
 def index():
 	return "Welcome home."
@@ -56,16 +54,8 @@ def form():
 		'''
 	else:
 		output = ""
-
-#		import fhirclient.models.patient as p
-#		search = p.Patient.where({'name':request.form.get('text1')})
-#		patients = search.perform_resources(smart.server)
-#		serializablepatientarray = []
-
-		dataUrl = settings['api_base'] + "Patient/?name="+request.form.get('text1')
+		dataUrl = settings['api_base'] + "/Patient/?name="+request.form.get('text1')
 		response = (requests.get(dataUrl).text)
-#		output = response
-#		print(type(output))
 		data = json.loads(response)
 		print(type(data))
 		patients = data.get('entry')
@@ -83,6 +73,7 @@ def form():
 		output = output + "</table>"
 		return render_template('search.html', output = Markup(output));
 #		return Response( output , mimetype='text/json')
+
 
 if __name__ == "__main__":
 	app.run()
@@ -134,8 +125,5 @@ def patient(id):
 
 
 
-
-
-"""
 
 	
