@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+import cgitb
+cgitb.enable()
+print("Content-Type:text/html\r\n\r\n")
+print("Hello Python!")
+
 from flask import Flask
 from flask import request
 from flask import Markup
@@ -12,11 +18,10 @@ import requests
 import fhirclient.models.patient as p
 import fhirclient.models.medicationstatement as ms
 
-"""
-Try 'Duck' as a name when searching vonk.fire.ly
-Try 'Thiel' as a name when searching smarthealthit.org
-"""
+# Try 'Duck' as a name when searching vonk.fire.ly
+# Try 'Thiel' as a name when searching smarthealthit.org
 
+"""
 app = Flask(__name__)
 settings = {
 	'app_id': 'my_web_app',
@@ -51,12 +56,12 @@ def form():
 		'''
 	else:
 		output = ""
-		"""
-		import fhirclient.models.patient as p
-		search = p.Patient.where({'name':request.form.get('text1')})
-		patients = search.perform_resources(smart.server)
-		serializablepatientarray = []
-		"""
+
+#		import fhirclient.models.patient as p
+#		search = p.Patient.where({'name':request.form.get('text1')})
+#		patients = search.perform_resources(smart.server)
+#		serializablepatientarray = []
+
 		dataUrl = settings['api_base'] + "Patient/?name="+request.form.get('text1')
 		response = (requests.get(dataUrl).text)
 #		output = response
@@ -129,7 +134,6 @@ def patient(id):
 
 
 
-"""
 
 
 """
