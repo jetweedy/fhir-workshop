@@ -25,10 +25,15 @@ https://github.com/jetweedy/fhir-workshop
 
 **jsFiddle Pages:**
 Logging to the Console: https://jsfiddle.net/jetweedy/m4tndLyw/
+
 Building a Table: https://jsfiddle.net/jetweedy/b73eo4su/
+
 Patient and Meds: https://jsfiddle.net/jetweedy/5bw8sp90/
+
 Map: https://jsfiddle.net/jetweedy/7r8auvs5/
+
 SMART on FHIR using CDN: https://jsfiddle.net/jetweedy/b7r38L2o/
+
 More Elaborate CRUD Demo of SMART on FHIR: https://jsfiddle.net/jetweedy/dLk0wbqv/
 
 **SMART on FHIR App Launcher Tutorial:**
