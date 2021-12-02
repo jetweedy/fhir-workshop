@@ -1,6 +1,6 @@
-# fhir-workshop
+# FHIR Workshop
 
-This project has several folders:
+## Repo Contents
 
  - **launchable** contains some files and instructions for running a demo of a SMART on FHIR app launch using a demo app launcher provided by smarthealthit.com.
  - **python** contains a very simplistic Flask app that accepts a name search term, looks up matches, and links them to some barebones 'details' pages. There is also a folder full of Jupyter Notebook files from in-class examples.
@@ -10,8 +10,7 @@ You can find more information about each in their respective README.md files. (I
 
 ---------------------------------------------------------------------
 
-## CHIP Workshop Resources
-
+## Resources
 **Course Info Page**
 https://chip.unc.edu/fhir-workshop
 
