@@ -1,0 +1,10 @@
+
+
+
+This is not actually secure or trustworthy yet.
+It's using fake data, and the post-back that it's doing from within the app could easily be faked.
+I'm just poking around for now to see how things _might_ work workflow-wise.
+
+
+
+Assuming we _could_ get it to work securely and reliably, then it would be smart to create some custom types to store these types of data as a bundle. OR at least the Media could be stored with a meta tag or something to indicate that it's 'purpose' (or something like that) is 'identification' (or something like that).

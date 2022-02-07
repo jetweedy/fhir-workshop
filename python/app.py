@@ -5,6 +5,8 @@
 #print("Hello Python!")
 
 from flask import Flask
+
+"""
 from flask import request
 from flask import Markup
 from flask import jsonify
@@ -27,13 +29,14 @@ settings = {
 }
 smart = client.FHIRClient(settings=settings)
 prep = smart.prepare()
+"""
 
 app = Flask(__name__)
 @app.route("/")
 def index():
 	return "Welcome home."
 
-
+"""
 @app.route("/smartapp/", methods=['GET', 'POST'])
 def smartapp():
 	return render_template('smartapp.html');
@@ -75,8 +78,6 @@ def form():
 #		return Response( output , mimetype='text/json')
 
 
-if __name__ == "__main__":
-	app.run()
 
 @app.route("/patient/", defaults={'id':None})
 @app.route("/patient/<id>/")
@@ -123,6 +124,12 @@ def patient(id):
 	return output;
 
 
+
+if __name__ == "__main__":
+	app.run()
+
+
+"""
 
 
 

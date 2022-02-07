@@ -1,4 +1,4 @@
-# Smart on FHIR Python and HTML Tools
+	# Smart on FHIR Python and HTML Tools
 
 Flask routing demo, as well as the launch/index files for the SMART on FHIR launch example.
 
@@ -23,3 +23,12 @@ Then you'll want to specifically install a few other things (now I'm just assumi
 pip install fhirclient
 pip install gunicorn
 ```
+
+## Running the Application:
+
+If you trust your network and/or you're in something like Virtualbox/Vagrant:
+```
+flask run --host=0.0.0.0
+```
+
+This allows someone other than the Vagrant box itself (like your host computer) to view the site in a browser.

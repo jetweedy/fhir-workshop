@@ -1,0 +1,9 @@
+Header add Access-Control-Allow-Origin "*"
+
+#RewriteEngine On
+#RewriteBase /FHIR/launch1
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^smartapp/(.*?)/(.*?)$ smartapp.php?jkid=$1&jkey=$2 [L]
+#RewriteRule ^smartlaunch/(.*?)/(.*?)$ smartlaunch.php?jkid=$1&jkey=$2 [L]
+
