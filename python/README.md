@@ -8,7 +8,7 @@ Flask routing demo, as well as the launch/index files for the SMART on FHIR laun
 
 ## Installing it yourself
 
-Assuming you have a cgi/python-enabled web server, then first make sure you have flash installed. We're assuming Python3, so depending on your installation of python and pip, one of these should work.
+Assuming you have a cgi/python-enabled web server, then first make sure you have flask installed. We're assuming Python3, so depending on your installation of python and pip, one of these should work.
 
 ```
 pip3 install flask
